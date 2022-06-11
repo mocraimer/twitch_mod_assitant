@@ -13,19 +13,15 @@ class RetrievalService {
           "accept-language": "en-US,en;q=0.9,he;q=0.8",
           "sec-ch-ua": "\" Not;A Brand\";v=\"99\", \"Google Chrome\";v=\"91\", \"Chromium\";v=\"91\"",
           "sec-ch-ua-mobile": "?0",
-          "sec-fetch-dest": "empty",
-          "sec-fetch-mode": "cors",
-          "sec-fetch-site": "same-site"
+          "sec-fetch-dest": "document",
         },
         "referrer": "https://twitchinsights.net/",
-        "referrerPolicy": "strict-origin-when-cross-origin",
         "body": null,
         "method": "GET",
-        "mode": "cors",
         "credentials": "omit"
       });
       let responseJson = await onlineBotsResponse.json();
-      return responseJson;
+      return responseJson['bots'];
     }
 
     getViewersInChat = async (channelName) => {
