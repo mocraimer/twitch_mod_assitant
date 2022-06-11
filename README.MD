@@ -2,4 +2,4 @@
 
 
 
-built ontop of https://github.com/fxnoob/browser-extension-boilerplate as boiler plate see their readme for folder structers etc.
+built ontop of https://github.com/lxieyang/chrome-extension-boilerplate-react as boiler plate see their readme for folder structers etc.
