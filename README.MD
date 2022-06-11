@@ -2,4 +2,4 @@
 
 
 
-built ontop of https://github.com/fregante/browser-extension-template as boiler plate see their readme for folder structers etc.
+built ontop of https://github.com/fxnoob/browser-extension-boilerplate as boiler plate see their readme for folder structers etc.

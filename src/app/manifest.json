@@ -1,6 +1,6 @@
 {
-  "name": "__MSG_appName__",
-  "description": "__MSG_appDescription__",
+  "name": "Twitch Mod Assitant",
+  "description": "An Extension to help Twitch moderators find bots and other things.",
   "version": "0.0.0",
   "permissions": [
     "storage",

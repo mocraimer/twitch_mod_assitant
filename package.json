@@ -82,9 +82,9 @@
     "comlink": "^4.3.1",
     "jss": "^10.6.0",
     "jss-rtl": "^0.3.0",
-    "react": "^18.0.0-alpha-e6be2d531",
+    "react": "^18.0.0",
     "react-content-loader": "^6.0.3",
-    "react-dom": "^18.0.0-alpha-e6be2d531",
+    "react-dom": "^18.0.0",
     "react-frame-component": "5.0.0"
   }
 }
