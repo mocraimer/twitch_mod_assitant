@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import { Button } from 'react-bootstrap';
-import logo from '../../assets/img/logo.svg';
-import Greetings from '../../containers/Greetings/Greetings';
+import { Button, Table } from 'react-bootstrap';
 import './Popup.css';
 import retrievalService from '../../../utils/retrivalService';
+import BotRow from './BotRow';
 
 const Popup = () => {
 
@@ -37,14 +36,25 @@ const Popup = () => {
 
   return (
     <div className="App">
-      <Button variant="primay" onClick={getBotsInChat}>Show Bots</Button>
+      <Button variant="primary" onClick={getBotsInChat}>Show Bots</Button>
 
       <div className='bot-list'>
+
         {showBotList && (() => `bots for ${channelName}`) &&
-          botList.map((bot, index) => {
-            return <div key={index}>{bot.name} is in {bot.amountOfChannels} channels</div>
-          })}
-      </div>
+          <Table responsive="sm">
+            <tbody>
+              <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th># of Channels</th>
+              </tr>
+              {botList.map((bot, index) => {
+                return <BotRow bot={bot} index={index} key={index + "_bot"}></BotRow>
+              })}
+            </tbody>
+          </Table>
+
+        } </div>
     </div>
   );
 };
