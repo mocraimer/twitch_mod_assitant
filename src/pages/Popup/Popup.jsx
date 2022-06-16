@@ -3,6 +3,7 @@ import { Button, Table } from 'react-bootstrap';
 import './Popup.css';
 import retrievalService from '../../../utils/retrivalService';
 import BotRow from './BotRow';
+import { useEffect } from 'react';
 
 const Popup = () => {
 
@@ -13,7 +14,8 @@ const Popup = () => {
 
   async function getBotsInChat() {
     let bots = await retrievalService.getBotList();
-    let viewers = await retrievalService.getViewersInChat(await retrievalService.getChannelNameInCurrentTab());
+    setChannelName(await retrievalService.getChannelNameInCurrentTab());
+    let viewers = await retrievalService.getViewersInChat(channelName);
     let botNameKeyToAmountOfChannels = {};
     bots.forEach(bot => {
       botNameKeyToAmountOfChannels[bot[0]] = bot[1];
@@ -33,14 +35,15 @@ const Popup = () => {
       setShowBotList(true);
     }
   }
+  useEffect(() => { getBotsInChat(); }, []);
 
   return (
     <div className="App">
       <Button variant="primary" onClick={getBotsInChat}>Show Bots</Button>
 
       <div className='bot-list'>
-
-        {showBotList && (() => `bots for ${channelName}`) &&
+        {showBotList && `Bots in ${channelName}`}
+        {showBotList && botList.length > 0 && (() => `bots for ${channelName}`) &&
           <Table responsive="sm">
             <tbody>
               <tr>
