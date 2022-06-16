@@ -27,9 +27,18 @@
 }
 
 .bot-list {
-  font-family: fantasy;
-  font-size: medium;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  color: azure;
+  font-weight: bold;
   text-align: left;
+}
+
+.table_cell {
+  border: pink solid 0.1em;
+  padding: 0.01em;
+  margin: 0.01em;
 }
 
 @keyframes App-logo-spin {
