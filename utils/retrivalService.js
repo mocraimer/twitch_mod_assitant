@@ -32,8 +32,13 @@ class RetrievalService {
         if (response.ok) return response.json()
         throw new Error('Network response was not ok.')
       });
-    let responseJson = JSON.parse(onlineChattersResponse.contents);
-    return responseJson["chatters"]["viewers"];
+    if (onlineChattersResponse.status.http_code === 200) {
+      let responseJson = JSON.parse(onlineChattersResponse.contents);
+      return responseJson["chatters"]["viewers"];
+    }
+    else {
+      return [];
+    }
   };
 
   getChannelNameInCurrentTab = async () => {
