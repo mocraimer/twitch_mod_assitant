@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
-import './Popup.css';
+import '../../pages/Popup/Popup.css';
 
 
 

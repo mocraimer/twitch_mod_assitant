@@ -8,10 +8,10 @@
   },
   "action": {
     "default_popup": "popup.html",
-    "default_icon": "icon-34.png"
+    "default_icon": "logo1_bot_assitant_34.png"
   },
   "icons": {
-    "128": "icon-128.png"
+    "128": "logo1_bot_assitant_128.png"
   },
   "permissions": [
     "tabs"
@@ -21,8 +21,8 @@
     {
       "resources": [
         "content.styles.css",
-        "icon-128.png",
-        "icon-34.png"
+        "logo1_bot_assitant_128.png",
+        "logo1_bot_assitant_34.png"
       ],
       "matches": []
     }

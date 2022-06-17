@@ -1,5 +1,5 @@
 chrome.devtools.panels.create(
   'Dev Tools from chrome-extension-boilerplate-react',
-  'icon-34.png',
+  'logo1_bot_assitant_34.png',
   'panel.html'
 );

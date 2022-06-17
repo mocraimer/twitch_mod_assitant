@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Button, Table } from 'react-bootstrap';
 import './Popup.css';
 import retrievalService from '../../../utils/retrivalService';
-import BotRow from './BotRow';
+import BotRow from '../../containers/BotRow/BotRow';
 import { useEffect } from 'react';
 
 const Popup = () => {
